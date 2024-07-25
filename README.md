@@ -22,7 +22,7 @@ The nonprofit foundation Alphabet Soup wants a tool that can help it select the 
 * `ASK_AMT`—Funding amount requested
 * `IS_SUCCESSFUL`—Was the money used effectively
 
-### Process
+### Optimization Process
 1. 
 
 ## Results
