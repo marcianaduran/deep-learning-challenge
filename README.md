@@ -22,9 +22,6 @@ The nonprofit foundation Alphabet Soup wants a tool that can help it select the 
 * `ASK_AMT`—Funding amount requested
 * `IS_SUCCESSFUL`—Was the money used effectively
 
-### Optimization Process
-1. 
-
 ## Results
 <!-- Using bulleted lists and images to support your answers, address the following questions -->
 ### Data Preprocessing
@@ -51,8 +48,23 @@ The nonprofit foundation Alphabet Soup wants a tool that can help it select the 
 * Were you able to achieve the target model performance?
   * No
 * What steps did you take in your attempts to increase model performance?
-  * 
+  * In order to increase model performance, a function was created to allow kerasturner to perform permutations of neural network models with different hyperparameters, evaluate its accuracy, and return the neural network model with the greatest accuracy. 
 
 ## Summary
 <!--  Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.-->
-* 
+* The initial neural network model had an accuracy of 0.7247 with a loss of 0.5536. The optimization process returned the following hyperparameters that resulted in an accuracy of 0.7307 and a loss of 0.5745:
+`{'activation': 'tanh',
+ 'first_units': 1,
+ 'num_layers': 3,
+ 'units_0': 9,
+ 'units_1': 7,
+ 'units_2': 1,
+ 'units_3': 7,
+ 'units_4': 1,
+ 'tuner/epochs': 20,
+ 'tuner/initial_epoch': 7,
+ 'tuner/bracket': 1,
+ 'tuner/round': 1,
+ 'tuner/trial_id': '0022',
+ 'units_5': 3}`
+The optimization did not have a significant impact to the accuracy, even though it evaluated multiple neural network models. Perhaps it would have been better to use a different classification model for this set of data.
